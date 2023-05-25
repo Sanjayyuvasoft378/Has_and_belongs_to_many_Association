@@ -1,0 +1,13 @@
+<h1>Assemblies#new</h1>
+<%= form_with model: @assembly do |form| %>
+    <div>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %><br>
+        <% @assembly.errors.full_messages_for(:name).each do |message| %>
+            <%= message %>
+        <% end %>
+    </div>
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %> 

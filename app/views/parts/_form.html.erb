@@ -1,0 +1,10 @@
+<h1> Add New Part Here </h1>
+<%= form_with model: @part do |form| %>
+    <div>
+        <%= form.label :part_number %><br>
+        <%= form.number_field :part_number %><br>
+    </div>
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

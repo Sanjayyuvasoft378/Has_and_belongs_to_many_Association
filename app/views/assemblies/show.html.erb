@@ -1,0 +1,8 @@
+<h1>Assemblies#show</h1>
+<%= @assembly.name %><br>
+<li><%= link_to "Edit", edit_assembly_path %><br></li>
+<li><%= link_to "Destroy", assembly_path, data:{
+    turbo_method: :delete,
+    turbo_confirm: "Are You Sure"
+} %></li>
+<%= link_to "Go Back", assemblies_path %>

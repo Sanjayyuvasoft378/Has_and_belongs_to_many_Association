@@ -1,0 +1,12 @@
+<h1>Assemblies#index</h1>
+<ul>
+    <% @assemblies.each do |assembly| %>
+        <li>
+            <%= link_to assembly.name,assembly %>
+        </li>
+    <% end %>
+</ul>
+<ul>
+<li><%= link_to "Add New", new_assembly_path %></li>
+<li><%= link_to "Go To Parts", parts_path %></li>
+</ul>

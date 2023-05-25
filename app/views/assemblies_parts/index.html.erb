@@ -1,0 +1,9 @@
+<h1>AssembliesParts#index</h1>
+<ul>
+    <% @assemb_parts.each do |a_part| %>
+        <li>
+        <%= link_to a_part.part_id, a_part %>
+        </li>
+    <% end %>
+</ul>
+<%= link_to "Add New", new_assemblies_part_path %>

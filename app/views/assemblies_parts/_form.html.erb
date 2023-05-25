@@ -1,0 +1,20 @@
+<%= form_with model: @assemb_part do |form| %>
+    <div>
+        <%= form.label :part_id %><br>
+        <%= form.collection_select :part_id, Part.order(:part_number), :id, :part_number %><br>
+        <% @assemb_part.errors.full_messages_for(:part_id).each do |message| %>
+            <%= message %>
+        <% end %>
+
+    </div>
+    <div>
+        <%= form.label :assembly_id %><br>
+        <%= form.collection_select :assembly_id, Assembly.order(:assembly_id), :id, :name %><br>
+        <% @assemb_part.errors.full_messages_for(:assembly_id).each do |message| %>
+            <%= message %>
+        <% end %>
+    </div>
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

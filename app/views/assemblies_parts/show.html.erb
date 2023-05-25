@@ -1,0 +1,11 @@
+<h1>AssembliesParts#show</h1>
+<ul>
+<li><%= @assemb_part.part_id %></li>
+<li><%= @assemb_part.assembly_id %></li>
+</ul>
+<li><%= link_to "Edit", edit_assemblies_part_path %></li>
+<li><%= link_to "Destroy", assemblies_part_path, data:{
+    turbo_method: :delete,
+    turbo_confirm: "Are You Sure"
+} %></li>
+<li><%= link_to "Go Back", assemblies_parts_path %></li>

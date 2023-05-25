@@ -1,0 +1,9 @@
+<h1>Parts#show</h1>
+<%= @part.part_number %>
+
+<li><%= link_to "Edit", edit_part_path %></li>
+<li><%= link_to "Destroy", part_path(@part) , data:{
+    turbo_method: :delete,
+    turbo_confirm: "Are You Sure"
+} %></li>
+<li><%= link_to "Go Back", parts_path %></li>
